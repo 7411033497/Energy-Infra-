@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Infra | Electrical Contractors</title>
+<meta name="description" content="Energy Infra provides professional electrical contracting, installation, maintenance and infrastructure services.">
+<style>
+:root{--navy:#071a2d;--blue:#0d6efd;--cyan:#12b5cb;--light:#f4f7fb;--text:#172333;--muted:#64748b;--white:#fff;--orange:#ffb000}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(7,26,45,.96);color:#fff;box-shadow:0 3px 18px #0002}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.45rem;font-weight:800;letter-spacing:.5px}.logo span{color:var(--orange)}
+nav{display:flex;gap:26px;align-items:center}nav a{font-size:.95rem;color:#dbeafe}nav a:hover{color:#fff}
+.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(110deg,#071a2d 0%,#0b3152 58%,#0d6b7d 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:500px;height:500px;border:70px solid #ffffff0b;border-radius:50%;right:-170px;top:-100px}
+.hero-content{max-width:760px;position:relative;z-index:1;padding:80px 0}
+.badge{display:inline-block;padding:8px 14px;border:1px solid #ffffff35;border-radius:30px;background:#ffffff10;color:#bceef5;margin-bottom:20px;font-weight:700}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.05;margin-bottom:22px}h1 span{color:var(--orange)}
+.hero p{font-size:1.15rem;color:#d9e7f4;max-width:650px;margin-bottom:30px}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;font-weight:800;margin-right:10px;transition:.2s}.btn-primary{background:var(--orange);color:#111}.btn-primary:hover{transform:translateY(-2px)}.btn-outline{border:1px solid #ffffff55;color:#fff}
+section{padding:80px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 45px}.eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem}.section-head h2{font-size:2.2rem;color:var(--navy);margin:8px 0 12px}.section-head p{color:var(--muted)}
+.services{background:var(--light)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;padding:28px;border-radius:14px;box-shadow:0 8px 28px #10243b0b;border:1px solid #e5edf5}.icon{width:50px;height:50px;border-radius:12px;background:#e8f5ff;display:grid;place-items:center;font-size:25px;margin-bottom:18px}.card h3{margin-bottom:8px;color:var(--navy)}.card p{color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about h2{font-size:2.3rem;color:var(--navy);margin:8px 0 16px}.about p{color:var(--muted);margin-bottom:18px}.checks{display:grid;gap:10px}.checks div{font-weight:700}.checks span{color:#0a9d70;margin-right:8px}
+.stats{background:var(--navy);color:#fff}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat strong{display:block;font-size:2rem;color:var(--orange)}.stat span{color:#c7d5e3}
+.projects{background:var(--light)}.project{min-height:190px;border-radius:14px;padding:25px;display:flex;align-items:end;color:#fff;background:linear-gradient(135deg,#123a5a,#0b8190);position:relative;overflow:hidden}.project:nth-child(2){background:linear-gradient(135deg,#172554,#2563a9)}.project:nth-child(3){background:linear-gradient(135deg,#203b33,#0e7490)}.project h3{position:relative;z-index:1}.project:after{content:"⚡";position:absolute;right:25px;top:20px;font-size:70px;opacity:.12}
+.contact{background:#fff}.contactbox{background:var(--navy);border-radius:18px;padding:42px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:35px}.contactbox h2{font-size:2rem;margin-bottom:12px}.contactbox p{color:#cbd8e6}.contact-info{display:grid;gap:15px;margin-top:22px}.contact-info a{font-weight:700;color:#fff}.contact-info a:hover{color:var(--orange)}
+form{display:grid;gap:12px}input,textarea{width:100%;padding:14px;border-radius:8px;border:1px solid #d7e0e9;font:inherit}textarea{min-height:120px;resize:vertical}form button{border:0;cursor:pointer;font:inherit}
+footer{background:#04111e;color:#9fb1c4;padding:25px 0;text-align:center;font-size:.9rem}
+@media(max-width:800px){nav{display:none}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.about,.contactbox{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{min-height:560px}.hero-content{padding:55px 0}section{padding:60px 0}.statgrid{grid-template-columns:1fr 1fr}.btn{margin-bottom:10px}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#home">ENERGY <span>INFRA</span></a>
+<button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+<nav id="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-content">
+<div class="badge">⚡ Electrical Contractors</div>
+<h1>Powering projects with <span>precision.</span></h1>
+<p>Energy Infra delivers dependable electrical contracting, installation and infrastructure solutions for residential, commercial and industrial projects.</p>
+<a class="btn btn-primary" href="#contact">Get a Quote</a>
+<a class="btn btn-outline" href="tel:+917411033497">Call 74110 33497</a>
+</div></section>
+
+<section class="services" id="services"><div class="container">
+<div class="section-head"><div class="eyebrow">What we do</div><h2>Electrical services you can rely on</h2><p>From installation to maintenance, we focus on safe, efficient and professional execution.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">⚡</div><h3>Electrical Installation</h3><p>Complete electrical installation and wiring solutions for new and existing projects.</p></div>
+<div class="card"><div class="icon">🔧</div><h3>Maintenance & Repairs</h3><p>Preventive maintenance, troubleshooting and repair services to keep systems running.</p></div>
+<div class="card"><div class="icon">🏗️</div><h3>Infrastructure Works</h3><p>Professional electrical infrastructure support for commercial and industrial requirements.</p></div>
+<div class="card"><div class="icon">💡</div><h3>Lighting Solutions</h3><p>Indoor, outdoor and project lighting installation designed for reliable performance.</p></div>
+<div class="card"><div class="icon">🔌</div><h3>Power Distribution</h3><p>Distribution, cabling and electrical connections planned for safe and efficient operation.</p></div>
+<div class="card"><div class="icon">🛡️</div><h3>Safety & Testing</h3><p>Electrical checks and testing focused on quality, safety and dependable project delivery.</p></div>
+</div></div></section>
+
+<section id="about"><div class="container about">
+<div><div class="eyebrow">About Energy Infra</div><h2>Built on quality, safety and reliability.</h2><p>We provide professional electrical contracting services with a practical, project-focused approach. Our goal is simple: deliver quality electrical work that performs reliably and stands the test of time.</p><div class="checks"><div><span>✓</span> Professional workmanship</div><div><span>✓</span> Safety-focused execution</div><div><span>✓</span> Reliable project support</div><div><span>✓</span> Clear communication</div></div></div>
+<div class="card"><h3>Why choose Energy Infra?</h3><p style="margin-top:12px">Whether it is a new installation, maintenance requirement or larger infrastructure project, we aim to provide dependable service from planning through completion.</p><div style="margin-top:22px;padding:18px;border-left:4px solid var(--orange);background:#f8fafc"><strong>Need an electrical contractor?</strong><br>Speak with us about your project today.</div></div>
+</div></section>
+
+<section class="stats"><div class="container statgrid"><div class="stat"><strong>100%</strong><span>Quality Focus</span></div><div class="stat"><strong>24/7</strong><span>Enquiry Support</span></div><div class="stat"><strong>Safe</strong><span>Work Practices</span></div><div class="stat"><strong>Pro</strong><span>Project Service</span></div></div></section>
+
+<section class="projects" id="projects"><div class="container"><div class="section-head"><div class="eyebrow">Our capabilities</div><h2>Projects we support</h2><p>Electrical solutions across a range of project environments.</p></div><div class="grid"><div class="project"><h3>Commercial Electrical Works</h3></div><div class="project"><h3>Industrial Infrastructure</h3></div><div class="project"><h3>Building & Site Installations</h3></div></div></div></section>
+
+<section class="contact" id="contact"><div class="container"><div class="contactbox">
+<div><div class="eyebrow" style="color:#55d7e7">Get in touch</div><h2>Let's discuss your project.</h2><p>Call or WhatsApp Energy Infra for electrical contracting enquiries and project requirements.</p>
+<div class="contact-info"><div>📞 <a href="tel:+917411033497">74110 33497</a></div><div>💬 <a href="https://wa.me/917411033497" target="_blank" rel="noopener">WhatsApp us</a></div><div>✉️ <span>Electrical contracting & infrastructure services</span></div></div></div>
+<form onsubmit="sendMessage(event)"><input id="name" required placeholder="Your name"><input id="phone" required placeholder="Phone number"><textarea id="message" required placeholder="Tell us about your project"></textarea><button class="btn btn-primary" type="submit">Send Enquiry</button></form>
+</div></div></section>
+</main>
+<footer><div class="container">© 2026 Energy Infra. All rights reserved.</div></footer>
+<script>
+function toggleMenu(){const n=document.getElementById('nav');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.top='72px';n.style.right='4%';n.style.background='#071a2d';n.style.padding='18px';n.style.borderRadius='10px'}
+function sendMessage(e){e.preventDefault();const n=document.getElementById('name').value,p=document.getElementById('phone').value,m=document.getElementById('message').value;const text=`Hello Energy Infra,%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AProject: ${encodeURIComponent(m)}`;window.open(`https://wa.me/917411033497?text=${text}`,'_blank')}
+</script>
+</body>
+</html>
